@@ -14,6 +14,13 @@ public class DTOConverter {
         return categoryDTO;
     }
 
+    public static Category convert(CategoryDTO categoryDTO) {
+        Category category = new Category();
+        category.setId(categoryDTO.getId());
+        category.setNome(categoryDTO.getNome());
+        return category;
+    }
+
     public static ProductDTO convert(Product product) {
         ProductDTO productDTO = new ProductDTO();
         productDTO.setNome(product.getNome());
@@ -25,5 +32,18 @@ public class DTOConverter {
             productDTO.setCategory(DTOConverter.convert(product.getCategory()));
         }
         return productDTO;
+    }
+
+    public static Product convert(ProductDTO productDTO) {
+        Product product = new Product();
+        product.setNome(productDTO.getNome());
+        product.setPreco(productDTO.getPreco());
+        product.setDescricao(productDTO.getDescricao());
+        product.setProductIdentifier(
+                productDTO.getProductIdentifier());
+        if (productDTO.getCategory() != null) {
+            product.setCategory(DTOConverter.convert(productDTO.getCategory()));
+        }
+        return product;
     }
 }

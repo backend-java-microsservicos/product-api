@@ -3,6 +3,7 @@ package mz.co.muianga.productapi.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import mz.co.muianga.productapi.converter.DTOConverter;
 import mz.co.muianga.productapi.dto.CategoryDTO;
 import mz.co.muianga.productapi.dto.ProductDTO;
 
@@ -23,16 +24,4 @@ public class Product {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    public static Product convert(ProductDTO productDTO) {
-        Product product = new Product();
-        product.setNome(productDTO.getNome());
-        product.setPreco(productDTO.getPreco());
-        product.setDescricao(productDTO.getDescricao());
-        product.setProductIdentifier(
-                productDTO.getProductIdentifier());
-        if (productDTO.getCategory() != null) {
-            product.setCategory(Category.convert(productDTO.getCategory()));
-        }
-        return product;
-    }
 }

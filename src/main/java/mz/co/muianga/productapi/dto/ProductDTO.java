@@ -21,5 +21,4 @@ public class ProductDTO {
     @NotNull
     private CategoryDTO category;
 
-
 }

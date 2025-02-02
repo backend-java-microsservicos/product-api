@@ -39,7 +39,7 @@ public class ProductService {
     }
 
     public ProductDTO save(ProductDTO productDTO) {
-        Product product = productRepository.save(Product.convert(productDTO));
+        Product product = productRepository.save(DTOConverter.convert(productDTO));
         return DTOConverter.convert(product);
     }
 
