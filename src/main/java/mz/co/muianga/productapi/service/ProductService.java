@@ -1,9 +1,9 @@
 package mz.co.muianga.productapi.service;
 
 import mz.co.muianga.productapi.converter.DTOConverter;
-import mz.co.muianga.productapi.dto.ProductDTO;
 import mz.co.muianga.productapi.model.Product;
 import mz.co.muianga.productapi.repository.ProductRepository;
+import mz.co.muianga.shoppingclient.dto.ProductDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

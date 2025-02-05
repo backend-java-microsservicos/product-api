@@ -1,9 +1,9 @@
 package mz.co.muianga.productapi.converter;
 
-import mz.co.muianga.productapi.dto.CategoryDTO;
-import mz.co.muianga.productapi.dto.ProductDTO;
 import mz.co.muianga.productapi.model.Category;
 import mz.co.muianga.productapi.model.Product;
+import mz.co.muianga.shoppingclient.dto.CategoryDTO;
+import mz.co.muianga.shoppingclient.dto.ProductDTO;
 
 public class DTOConverter {
 
